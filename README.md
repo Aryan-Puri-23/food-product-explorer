@@ -1,16 +1,73 @@
-# React + Vite
+# Food Product Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
+This is a web application built using React that allows users to explore food products using the OpenFoodFacts API.  
+The app lets users search products by name or barcode, filter them by category, sort them, and view detailed information about each product.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features Implemented
 
-## React Compiler
+### Homepage
+- Displays a list of food products fetched from OpenFoodFacts API
+- Each product shows:
+  - Product name
+  - Product image
+  - Categories
+  - Nutrition grade
+- Load More button for pagination
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Search
+- Search products by name
+- Search products by barcode
+- If no product is found:
+  - A message is shown
+  - The product list automatically resets after a few seconds
 
-## Expanding the ESLint configuration
+### Category Filter
+- Categories are fetched directly from the OpenFoodFacts API
+- Users can filter products by selecting a category
+- Option to reset back to all categories
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Sort
+- Sort products by:
+  - Name (A–Z, Z–A)
+  - Nutrition Grade (A–E, E–A)
+
+### Product Details Page
+- Displays detailed information for a selected product:
+  - Product image
+  - Full ingredients list
+  - Nutrition values (energy, fat, carbs, protein)
+  - Labels (if available)
+- If an invalid barcode is entered:
+  - An error message is shown
+  - User is automatically redirected back after a few seconds
+
+### Responsive Design
+- Fully responsive for mobile, tablet, and desktop screens
+- Built using Tailwind CSS
+
+---
+
+## Tech Stack Used
+- React.js
+- React Router
+- Axios
+- Tailwind CSS
+- OpenFoodFacts API
+
+---
+
+## API Used
+- Base URL: https://world.openfoodfacts.org/
+- Product search
+- Category listing
+- Barcode-based product details
+
+---
+
+## Time Taken
+Approximately 3 days.
+
+---
